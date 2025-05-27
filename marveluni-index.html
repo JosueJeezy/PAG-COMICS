@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARVEL UNIVERSE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;600;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/spidermanlogo.png">
+    <link rel="stylesheet" href="marveluni-index.css">
+</head>
+<body>
+    <header>
+        <div class="logo">MARVEL UNIVERSE</div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#" id="navHome">INICIO</a></li>
+            <li><a href="all-comics.html" id="navComics">CÓMICS</a></li>
+            <li><a href="#" id="navCharacters">PERSONAJES</a></li>
+            <li><a href="#" id="navMovies">PELÍCULAS</a></li>
+            <li><a href="#" id="navNews">NOTICIAS</a></li>
+            <li><a href="#" id="navContact">CONTACTO</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title fade-in-up">DESCUBRE EL UNIVERSO MARVEL</h1>
+                <p class="hero-subtitle fade-in-up">Explora las aventuras de tus superhéroes favoritos</p>
+                <a href="all-comics.html" class="hero-btn pulse-animation">EXPLORAR AHORA</a>
+            </div>
+        </section>
+
+        <h2 class="section-title">DESTACADOS</h2>
+        <div class="comic-carousel">
+            <div class="carousel-container" id="carouselContainer">
+                <div class="carousel-item active" style="background-image: url('img/Spider-Verse.jpg')">
+                    <div class="carousel-caption">EVENTO SPIDER-VERSE</div>
+                </div>
+                <div class="carousel-item" style="background-image: url('img/spiritsbg.jpg')">
+                    <div class="carousel-caption">SPIRITS OF VENGEANCE</div>
+                </div>
+                <div class="carousel-item" style="background-image: url('img/moonknightbg.jpg')">
+                    <div class="carousel-caption">MOON KNIGHT</div>
+                </div>
+                <div class="carousel-item" style="background-image: url('img/DDshadowland.avif')">
+                    <div class="carousel-caption">DAREDEVIL: SHADOWLAND</div>
+                </div>
+                <div class="carousel-item" style="background-image: url('img/bloodhuntbg.jpeg')">
+                    <div class="carousel-caption">EVENTO BLOOD HUNT</div>
+                </div>
+            </div>
+            <div class="carousel-indicators" id="carouselIndicators"></div>
+            <div class="carousel-controls">
+                <button class="carousel-btn" id="prevBtn">ANTERIOR</button>
+                <button class="carousel-btn" id="nextBtn">SIGUIENTE</button>
+            </div>
+        </div>
+
+        <h2 class="section-title">ÚLTIMOS LANZAMIENTOS</h2>
+        <section class="content-section">
+            <div class="comic-card">
+                <img src="imgcomic/SOV/SOV01.jpg" alt="Spider-Man" class="card-img">
+                <div class="card-content">
+                    <h3 class="card-title">SPIRITS OF VENGEANCE</h3>
+                    <p class="card-text">Zarathos escapa de su prisión y decidido a recuperar su poder va en busca de Ghost Rider sin impportar quien se le cruze.</p>
+                    <div class="detail-section">
+                        <h4 class="section-title">DETALLES:</h4>
+                        <ul class="details-list">
+                            <li class="detail-item"><strong class="comic-writter">Escritor: </strong> Gael Sanchez</li>
+                            <li class="detail-item"><strong class="comic-draws">Dibujante: </strong> Josué Reyes</li>
+                            <li class="detail-item"><strong class="comic-pages">No. de páginas:</strong> 32</li>
+                            <li class="detail-item"><strong class="comic-date">Fecha de publicación: </strong> 5 de Mayo, 2025</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="card-btn" data-effect="comic-effect">VER INFO</a>
+                </div>
+            </div>
+            <div class="comic-card">
+                <img src="img/amazspidey.jpg" alt="Spider-Man" class="card-img">
+                <div class="card-content">
+                    <h3 class="card-title">AMAZING SPIDER-MAN: BLOOD HUNT</h3>
+                    <p class="card-text">"El papel de Spidey en BLOOD HUNT se vuelve claro y, por supuesto. Así es, Morbius, está involucrado en el gran juego vampírico y Peter tiene que averiguar si necesita eliminar a su enemigo o ¿SALVARLO?"</p>
+                    <div class="detail-section">
+                        <h4 class="section-title">DETALLES:</h4>
+                        <ul class="details-list">
+                            <li class="detail-item"><strong class="comic-writter">Escritor: </strong> Justinaa Ireland</li>
+                            <li class="detail-item"><strong class="comic-draws">Dibujante: </strong> Marcelo Ferreira</li>
+                            <li class="detail-item"><strong class="comic-pages">No. de páginas:</strong> 32</li>
+                            <li class="detail-item"><strong class="comic-date">Fecha de publicación: </strong> 15 de Marzo, 2025</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="card-btn" data-effect="comic-effect">VER INFO</a>
+                </div>
+            </div>
+            <div class="comic-card">
+                <img src="img/damnation.jpg" alt="Strange" class="card-img">
+                <div class="card-content">
+                    <h3 class="card-title">DOCTOR STRANGE: DAMNATION</h3>
+                    <p class="card-text">La ciudad del pecado recibe a su mayor pecador hasta ahora.¡Inadvertidamente abre una gran puerta para la encarnación del mal, MEPHISTO!</p>
+                    <div class="detail-section">
+                        <h4 class="section-title">DETALLES:</h4>
+                        <ul class="details-list">
+                            <li class="detail-item"><strong class="comic-writter">Escritor: </strong> Nick Spencer</li>
+                            <li class="detail-item"><strong class="comic-draws">Dibujante: </strong> Donny Cates</li>
+                            <li class="detail-item"><strong class="comic-pages">No. de páginas:</strong> 32</li>
+                            <li class="detail-item"><strong class="comic-date">Fecha de publicación: </strong> 21 de Marzo, 2025</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="card-btn" data-effect="comic-effect">VER INFO</a>
+                </div>
+            </div>
+            <div class="comic-card">
+                <img src="img/daredevil12.jpg" alt="Daredevil" class="card-img">
+                <div class="card-content">
+                    <h3 class="card-title">DAREDEVIL: KNOW FEAR</h3>
+                    <p class="card-text">Matt Murdock regresa a Hell's Kitchen para enfrentar una nueva ola de crimen mientras lidia con su identidad como vigilante.</p>
+                    <div class="detail-section">
+                        <h4 class="section-title">DETALLES:</h4>
+                        <ul class="details-list">
+                            <li class="detail-item"><strong class="comic-writter">Escritor: </strong> Chip Zdarsky</li>
+                            <li class="detail-item"><strong class="comic-draws">Dibujante: </strong> Marco Checchetto</li>
+                            <li class="detail-item"><strong class="comic-pages">No. de páginas:</strong> 32</li>
+                            <li class="detail-item"><strong class="comic-date">Fecha de publicación: </strong> 9 de Junio, 2025</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="card-btn" data-effect="comic-effect">VER INFO</a>
+                </div>
+            </div>
+            
+        </section>
+
+        <h2 class="section-title">PERSONAJES DESTACADOS</h2>
+        <section class="character-section">
+            <div class="character-grid">
+                <div class="character-card">
+                    <img src="img/spdrmn.jpg" alt="Spider-Man" class="character-img">
+                    <div class="character-info">
+                        <h3 class="character-name">SPIDER-MAN</h3>
+                        <p class="character-desc">Peter Parker obtuvo sus poderes arácnidos tras ser mordido por una araña radiactiva. Ahora utiliza sus habilidades para proteger Nueva York como el asombroso Spider-Man.</p>
+                    </div>
+                </div>
+                <div class="character-card">
+                    <img src="img/ghostrdr.jpg" alt="Ghost Rider" class="character-img">
+                    <div class="character-info">
+                        <h3 class="character-name">GHOST RIDER</h3>
+                        <p class="character-desc">Johnny Blaze hizo un pacto con Mephisto para salvar a su padre, convirtiéndose en el Ghost Rider, un vengador sobrenatural que caza a los malvados.</p>
+                    </div>
+                </div>
+                <div class="character-card">
+                    <img src="img/blade.jpg" alt="Blade" class="character-img">
+                    <div class="character-info">
+                        <h3 class="character-name">BLADE</h3>
+                        <p class="character-desc">Mitad vampiro, mitad humano, Blade ha dedicado su vida a exterminar vampiros y otras criaturas sobrenaturales que amenazan a la humanidad.</p>
+                    </div>
+                </div>
+                <div class="character-card">
+                    <img src="img/Daredevil.jpg" alt="Daredevil" class="character-img">
+                    <div class="character-info">
+                        <h3 class="character-name">DAREDEVIL</h3>
+                        <p class="character-desc">Matt Murdock quedó ciego de niño, pero sus otros sentidos se agudizaron. Como abogado lucha por la justicia durante el día, y como Daredevil combate el crimen por la noche.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <h2>ÚNETE AL UNIVERSO MARVEL</h2>
+            <p>Recibe las últimas noticias, lanzamientos exclusivos y contenido especial directamente en tu email.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Tu email" class="newsletter-input" required>
+                <button type="submit" class="newsletter-btn">SUSCRIBIRME</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <div class="footer-logo">MARVEL UNIVERSE</div>
+                <p>Tu portal definitivo para explorar el vasto universo de personajes y historias de Marvel. Desde los icónicos superhéroes hasta las épicas sagas que han definido generaciones.</p>
+            </div>
+            <div class="footer-links">
+                <h3>NAVEGACIÓN</h3>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="all-comics.html">Cómics</a></li>
+                    <li><a href="#">Personajes</a></li>
+                    <li><a href="#">Películas</a></li>
+                    <li><a href="#">Series</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>SÍGUENOS</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/jeezycomics">Facebook</a></li>
+                    <li><a href="https://x.com/marvelcomicshq?lang=es">X/Twitter</a></li>
+                    <li><a href="https://www.instagram.com/marvelcomics?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Instagram</a></li>
+                    <li><a href="https://www.youtube.com/@marvel">YouTube</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>LEGAL</h3>
+                <ul>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                    <li><a href="#">Cookies</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p><a class="easteregg" href="easteregg.html">&copy;</a> 2025 MARVEL - Todos los derechos reservados</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/jeezycomics" class="social-icon" id="fb">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                    </svg>
+                </a>
+                <a href="https://x.com/marvelcomicshq?lang=es" class="social-icon" id="twitter">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                        <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/marvelcomics?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="social-icon" id="ig">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                    </svg>
+                </a>
+                <a href="https://www.youtube.com/@marvel" class="social-icon" id="yt">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                        <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal para detalles de cómics -->
+    <div class="modal" id="comicModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Detalles del Cómic</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="modalContent"></div>
+            </div>
+            <div class="btn-modal">
+                <a href="#" class="btn" id="readComicBtn">LEER COMIC</a>
+                <a href="#" class="btn" id="downloadComicBtn">DESCARGAR</a>
+                <a href="#" class="btn" id="viewSeriesBtn">VER SERIE</a>
+            </div>
+    </div>
+
+    <script src="marveluni-index.js"></script>
+</body>
+</html>

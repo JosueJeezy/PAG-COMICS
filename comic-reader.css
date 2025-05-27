@@ -1,0 +1,317 @@
+.reader-body {
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Barra de navegación superior */
+.reader-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000;
+    border-bottom: 1px solid #333;
+    z-index: 100;
+    position: sticky;
+    top: 0;
+}
+
+.volver-btn {
+    background-color: #ED1D24;
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+}
+
+.volver-btn:hover {
+    background-color: #B11313;
+}
+
+.ComicTitle{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 150%;
+    padding-top: 7px;
+    padding-left: 120px;
+    letter-spacing: 1px;
+}
+
+.reader-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.readmode{
+    color: black;
+}
+
+.control-label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    color: #fff;
+}
+.issue{
+    color: black;
+}
+#pageSelect option{
+    color: black;
+}
+
+.reader-select {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 8px 30px 8px 10px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.9rem;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+/* Contenedor del cómic */
+.comic-container {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Vistas de página */
+.page-view {
+    display: none;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.page-view.active {
+    display: flex;
+}
+
+/* Contenedor de página única */
+.page-container {
+    height: 100%;
+    max-height: calc(100vh - 70px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.comic-page {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    transform-origin: center center;
+    transition: transform 0.1s ease-out;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+/* Contenedor de doble página */
+.double-page-container {
+    height: 100%;
+    max-height: calc(100vh - 70px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.double-page-container .comic-page {
+    max-height: 100%;
+    max-width: 50%;
+    object-fit: contain;
+    transform-origin: center center;
+}
+
+/* Contenedor de todas las páginas */
+.all-pages-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    overflow-y: auto;
+    height: calc(100vh - 70px);
+    width: 100%;
+}
+
+.all-pages-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    transform-origin: center top;
+    transition: transform 0.2s ease;
+}
+
+.all-pages-container .comic-page {
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.all-pages-container .comic-page:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Estilo para la página seleccionada en vista de todas las páginas */
+.all-pages-container .comic-page.selected-page {
+    border: 2px solid #ED1D24;
+    box-shadow: 0 0 20px rgba(237, 29, 36, 0.5);
+}
+
+/* Flechas de navegación */
+.nav-arrow {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color 0.3s;
+    z-index: 10;
+}
+
+.nav-arrow:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.prev-arrow {
+    left: 20px;
+}
+
+.next-arrow {
+    right: 20px;
+}
+
+.nav-arrow svg {
+    width: 30px;
+    height: 30px;
+    fill: white;
+}
+
+/* Zoom instructions */
+.zoom-instructions {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: #fff;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    z-index: 20;
+}
+
+.zoom-instructions:hover {
+    opacity: 1;
+}
+
+/* Estilos de zoom */
+.zoomed {
+    cursor: grab !important;
+}
+
+.page-container, .double-page-container {
+    cursor: default;
+}
+
+.page-container.can-zoom, .double-page-container.can-zoom {
+    cursor: grab;
+}
+
+.page-container.is-dragging, .double-page-container.is-dragging {
+    cursor: grabbing !important;
+}
+
+/* Estilos para hacerlo Responsive */
+@media (max-width: 768px) {
+    .reader-nav {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+    
+    .reader-controls {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav-arrow {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .nav-arrow svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .double-page-container {
+        flex-direction: column;
+    }
+    
+    .double-page-container .comic-page {
+        max-width: 100%;
+    }
+}
+
+/* Mejoras para la visualización en dispositivos táctiles */
+@media (hover: none) {
+    .zoom-instructions {
+        bottom: 50px;
+        padding: 15px 20px;
+        font-size: 1rem;
+    }
+    
+    .nav-arrow {
+        width: 60px;
+        height: 60px;
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+    
+    .nav-arrow svg {
+        width: 40px;
+        height: 40px;
+    }
+}

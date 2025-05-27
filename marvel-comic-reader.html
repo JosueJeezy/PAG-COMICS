@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lector de Cómics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;600;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="marveluni-index.css">
+    <link rel="stylesheet" href="comic-reader.css">
+    <link rel="icon" href="img/spidermanlogo.png">
+</head>
+<body class="reader-body">
+    <nav class="reader-nav">
+        <a href="marveluni-index.html" class="volver-btn">VOLVER</a>
+
+        <p class="ComicTitle" id="ComicTitle"></p>
+        
+        <div class="reader-controls">
+            <span class="control-label">Modo de lectura</span>
+            <select id="viewMode" class="reader-select">
+                <option class="readmode" value="single">Una página</option>
+                <option class="readmode" value="double">Dos páginas</option>
+                <option class="readmode" value="all">Todas las páginas</option>
+            </select>
+            
+            <span class="control-label">Página</span>
+            <select id="pageSelect" class="reader-select">
+                <!-- Se generará dinámicamente con JavaScript -->
+            </select>
+        </div>
+    </nav>
+
+    <!-- Contenedor principal del cómic -->
+    <div class="comic-container">
+        <!-- Vista de una página -->
+        <div id="singlePageView" class="page-view active">
+            <button class="nav-arrow prev-arrow" id="prevPage">
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                    <path fill="currentColor" d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                </svg>
+            </button>
+            
+            <div class="page-container">
+                <img src="/api/placeholder/800/1200?text=Cargando+Cómic..." alt="Comic Page" id="currentPage" class="comic-page">
+                <div class="zoom-instructions">Use la rueda del ratón para zoom. Arrastre para mover.</div>
+            </div>
+            
+            <button class="nav-arrow next-arrow" id="nextPage">
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                    <path fill="currentColor" d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Vista de dos páginas -->
+        <div id="doublePageView" class="page-view">
+            <button class="nav-arrow prev-arrow" id="prevDoublePage">
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                    <path fill="currentColor" d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                </svg>
+            </button>
+            
+            <div class="double-page-container">
+                <img src="/api/placeholder/800/1200?text=Cargando+Cómic..." alt="Comic Page Left" id="leftPage" class="comic-page">
+                <img src="/api/placeholder/800/1200?text=Cargando+Cómic..." alt="Comic Page Right" id="rightPage" class="comic-page">
+                <div class="zoom-instructions">Use la rueda del ratón para zoom. Arrastre para mover.</div>
+            </div>
+            
+            <button class="nav-arrow next-arrow" id="nextDoublePage">
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                    <path fill="currentColor" d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Vista de todas las páginas -->
+        <div id="allPagesView" class="page-view">
+            <div class="all-pages-container">
+                <!-- Las páginas se generarán dinámicamente con JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Cargar los datos de los cómics -->
+    <script src="comics-data.js"></script>
+    
+    <!-- Script principal del lector -->
+    <script src="marvel-comic-reader.js"></script>
+</body>
+</html>
